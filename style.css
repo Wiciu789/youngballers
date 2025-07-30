@@ -110,3 +110,39 @@ h3 {
   margin: 0.5rem 0;
   font-size: 1.1rem;
 }
+.zamow-btn {
+  display: inline-block;
+  padding: 1rem 2rem;
+  background: linear-gradient(135deg, #00ccff, #0077ff);
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  text-decoration: none;
+  box-shadow: 0 0 20px rgba(0, 119, 255, 0.5);
+  transition: all 0.3s ease;
+}
+
+.zamow-btn:hover {
+  transform: scale(1.07);
+  box-shadow: 0 0 30px rgba(0, 204, 255, 0.6);
+  background: linear-gradient(135deg, #0077ff, #00ccff);
+}
+
+.center {
+  text-align: center;
+  margin-top: 2rem;
+}
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 2rem;
+}
+
+.container {
+  max-width: 700px;
+  width: 100%;
+}
