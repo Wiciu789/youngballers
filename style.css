@@ -92,3 +92,21 @@ p, li {
     max-width: 200px;
   }
 }
+h3 {
+  color: #00ffaa;
+  font-size: 1.4rem;
+  margin-top: 2.5rem;
+  text-align: center;
+  text-shadow: 0 0 10px #00ffaa;
+}
+
+.price-list {
+  list-style: none;
+  padding: 0;
+  text-align: center;
+}
+
+.price-list li {
+  margin: 0.5rem 0;
+  font-size: 1.1rem;
+}
