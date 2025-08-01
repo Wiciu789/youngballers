@@ -4,7 +4,9 @@ body {
   background: linear-gradient(135deg, #00ccff, #0077ff, #0099ff);
   background-size: 400% 400%;
   animation: gradientFlow 15s ease infinite;
-  color: #000;
+  color: #ffffff;
+  margin: 0;
+  padding: 0;
 }
 
 h1, h2, h3 {
@@ -266,7 +268,7 @@ h3 {
 
 .steps li::before {
   counter-increment: step;
-  content: counter(step);
+  content: '🔵 ' counter(step) '️⃣ ';
   position: absolute;
   left: 0;
   top: 0;
