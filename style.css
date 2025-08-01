@@ -1,6 +1,8 @@
 
 body {
- font-family: 'Poppins', sans-serif;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #d6faff, #b3e5fc); /* MEGA jasny niebieski */
+  color: #000; /* czarny tekst dla czytelności */
 }
 h1, h2, h3 {
   font-family: 'Orbitron', sans-serif;
@@ -10,13 +12,7 @@ h1, h2, h3 {
 h1:hover, h2:hover {
   transform: scale(1.05);
 }
-} 
- background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-  color: #f0f0f0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  margin: 0;
-  padding: 0;
-}
+
 
 .container {
   max-width: 800px;
