@@ -146,3 +146,41 @@ h3 {
   max-width: 700px;
   width: 100%;
 }
+.ai-trainer {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-bottom: 40px;
+}
+
+.ai-trainer img {
+  width: 200px;
+  height: auto;
+}
+
+.speech-bubble {
+  margin-top: 15px;
+  background: #ffffff;
+  border: 2px solid #ccc;
+  border-radius: 15px;
+  padding: 10px 15px;
+  max-width: 250px;
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+  font-size: 14px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  position: relative;
+}
+
+.speech-bubble::after {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 0 10px 10px 10px;
+  border-style: solid;
+  border-color: transparent transparent #ffffff transparent;
+}
