@@ -184,3 +184,34 @@ h3 {
   border-style: solid;
   border-color: transparent transparent #ffffff transparent;
 }
+.trainer-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.trainer-img {
+  width: 200px;
+  height: auto;
+}
+
+.speech-bubble {
+  background: #f2f2f2;
+  border-radius: 15px;
+  padding: 10px 15px;
+  max-width: 220px;
+  font-size: 14px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  position: relative;
+}
+
+.speech-bubble::before {
+  content: "";
+  position: absolute;
+  left: -10px;
+  top: 20px;
+  width: 0;
+  height: 0;
+  border: 10px solid transparent;
+  border-right-color: #f2f2f2;
+}
