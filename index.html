@@ -1,83 +1,93 @@
-
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>YoungBallers - Twój plan treningowy</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>YoungBallers — Twój plan treningowy</title>
+  <meta name="description" content="Spersonalizowane plany treningowe dla młodych piłkarzy. Technika, szybkość, siła, wytrzymałość i bezpieczny powrót po kontuzji." />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <div class="container">
-        <!-- Sekcja ludzika + opis -->
-        <div class="intro">
-            <img src="trainer-no-bg.png" alt="Trener" class="trainer-img">
-            <div class="intro-text">
-                <h1>YoungBallers – Personalizowany Plan Treningowy</h1>
-                <p>Plan tworzony dla młodych piłkarzy, dopasowany do Twojego wieku, wagi, celu i czasu.</p>
+  <main class="shell">
 
-                <h2>Co zawiera plan:</h2>
-               <ul class="plan-list">
-  <li class="plan-item"><span class="icon">🏃‍♂️</span><span><strong>Poprawa kondycji</strong></span></li>
-  <li class="plan-item"><span class="icon">💪</span><span><strong>Zwiększenie siły</strong></span></li>
-  <li class="plan-item"><span class="icon">⚽</span><span><strong>Technika piłkarska</strong></span></li>
-  <li class="plan-item"><span class="icon">📈</span><span><strong>Ogólnorozwojowy</strong></span></li>
-  <li class="plan-item"><span class="icon">🩹</span><span><strong>Powrót po kontuzji</strong></span></li>
-  <li class="plan-item"><span class="icon">⚡</span><span><strong>Szybkość i zwinność</strong></span></li>
-  <li class="plan-item"><span class="icon">⏱️</span><span><strong>Wytrzymałość meczowa</strong></span></li>
-</ul>
-            </div>
-        </div>
+    <!-- HERO -->
+    <section class="panel hero">
+      <span class="badge">YoungBallers</span>
+      <h1>Personalizowane plany treningowe dla piłkarzy</h1>
+      <p class="sub">Dopasowane do wieku, poziomu i pozycji. Technika, szybkość, wydolność i mental. 🔥</p>
+    </section>
 
-        <!-- Cennik -->
-        <h2 class="center">💰 Cennik – Wybierz swój plan</h2>
-        <div class="pricing">
-            <div class="price-item">
-                <div class="flip">
-                    <div class="front">
-                        <h4>📅 Plan testowy <span>1 tydzień</span></h4>
-                    </div>
-                    <div class="back">
-                        <p><strong>0 zł</strong> – przetestuj za darmo</p>
-                    </div>
-                </div>
-            </div>
+    <!-- GRID 2 kolumny: Jak to działa + Cennik -->
+    <section class="grid-2">
 
-            <div class="price-item">
-                <div class="flip">
-                    <div class="front">
-                        <h4>🚀 Plan startowy <span>2 tygodnie</span></h4>
-                    </div>
-                    <div class="back">
-                        <p><strong>19 zł</strong> – dla tych, co chcą spróbować poważniej</p>
-                    </div>
-                </div>
-            </div>
+      <!-- Jak to działa -->
+      <div class="panel">
+        <h2 class="h2">Jak to działa?</h2>
+        <ol class="steps">
+          <li>Wypełnij formularz zamówienia (2 min).</li>
+          <li>Wyślij płatność <strong>BLIK: 514 609 210</strong>.</li>
+          <li>W ciągu 24–48 h dostaniesz plan na e‑mail.</li>
+        </ol>
+        <a class="btn btn-primary" target="_blank" rel="noopener"
+           href="https://forms.gle/ZKgq3z4qoiUp2pwX9">Wypełnij formularz</a>
+        <p class="note">Po formularzu wykonaj BLIK — dopiero wtedy zaczynamy układać plan.</p>
+      </div>
 
-            <div class="price-item">
-                <div class="flip">
-                    <div class="front">
-                        <h4>🏆 Plan mistrzowski <span>4 tygodnie</span></h4>
-                    </div>
-                    <div class="back">
-                        <p><strong>29 zł</strong> – pełny dostęp + gwarancja efektów</p>
-                    </div>
-                </div>
-            </div>
-        </div>
+      <!-- Cennik (układ jak Trainer) -->
+      <div class="panel">
+        <h2 class="h2">Cennik</h2>
 
-        <div class="center">
-            <a href="https://forms.gle/c6sAzQ5k9E0E9gmd6" target="_blank" class="zamow-btn">📩 Zamów Plan</a>
-        </div>
-    </div>
+        <article class="price-card">
+          <div class="pill">Najczęściej wybierany</div>
+          <h3>Bogacz — 3 tyg</h3>
+          <p class="muted">Kompletny cykl progresu</p>
+          <div class="price">29 zł</div>
+          <a class="btn btn-ghost" target="_blank" rel="noopener"
+             href="https://forms.gle/ZKgq3z4qoiUp2pwX9">Zamów</a>
+        </article>
 
-    <!-- Skrypt flip na telefonach -->
-    <script>
-        document.querySelectorAll('.price-item .flip').forEach(el=>{
-            el.parentElement.addEventListener('click', ()=> {
-                el.classList.toggle('is-flipped');
-            });
-        });
-    </script>
+        <article class="price-card">
+          <h3>Plan — 2 tyg</h3>
+          <p class="muted">Szybki progres i test</p>
+          <div class="price">19 zł</div>
+          <a class="btn btn-ghost" target="_blank" rel="noopener"
+             href="https://forms.gle/ZKgq3z4qoiUp2pwX9">Zamów</a>
+        </article>
+
+        <article class="price-card">
+          <h3>Plan — 1 tydz</h3>
+          <p class="muted">Start i rozgrzewka projektu</p>
+          <div class="price">0 zł</div>
+          <a class="btn btn-ghost" target="_blank" rel="noopener"
+             href="https://forms.gle/ZKgq3z4qoiUp2pwX9">Zamów</a>
+        </article>
+
+        <p class="tiny">* Ceny brutto. Dostawa planu e‑mail w 48 h od potwierdzenia BLIK.</p>
+      </div>
+    </section>
+
+    <!-- Co zawiera plan (ciemny panel, ludzik po lewej) -->
+    <section class="panel dark" id="co-zawiera-plan">
+      <h2 class="h2">Co zawiera plan?</h2>
+      <p class="muted">Kompletny rozwój pod młodego ballera – zero ściemy, sam konkret.</p>
+
+      <div class="features">
+        <figure class="coach">
+          <img src="trainer-no-bg.png" alt="Trener YoungBallers">
+        </figure>
+
+        <ul class="feature-list">
+          <li><span class="ico">💪</span> <strong>Siła</strong> – stabilizacja, core, progres żelastwa</li>
+          <li><span class="ico">⚽</span> <strong>Technika piłkarska</strong> – touch, zwody, kontrola</li>
+          <li><span class="ico">🏃‍♂️</span> <strong>Wytrzymałość</strong> – interwały meczowe, tlen i próg</li>
+          <li><span class="ico">⚡</span> <strong>Szybkość</strong> – start, przyspieszenie, krok meczu</li>
+          <li><span class="ico">📈</span> <strong>Ogólny rozwój</strong> – mobilność, koordynacja, prewencja</li>
+          <li><span class="ico">🩺</span> <strong>Powrót po kontuzji</strong> – bezpieczne wejście, stopniowanie obciążeń</li>
+        </ul>
+      </div>
+    </section>
+
+    <footer>© 2025 YoungBallers • Grasz mądrzej, trenujesz lepiej.</footer>
+  </main>
 </body>
 </html>
