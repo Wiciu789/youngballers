@@ -223,3 +223,17 @@ footer{ opacity:.9; font-size:13px; text-align:center; margin-top:22px; color:va
   .feature-list{ order: 1; }
   .coach{ order: 2; }
 }
+#playfield {
+  position: relative;
+  width: 100%;
+  height: 400px; /* wysokość pola gry */
+  background: transparent;
+  overflow: hidden;
+}
+
+#ball-emoji {
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  font-size: 48px;
+}
