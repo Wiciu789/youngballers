@@ -33,56 +33,60 @@
         <p class="note">Po formularzu wykonaj BLIK — dopiero wtedy zaczynamy układać plan.</p>
       </div>
 
-      <!-- Cennik (flip: przód nazwa, tył cena) -->
-      <div class="panel">
-        <h2 class="h2">Cennik</h2>
+<div class="panel">
+  <h2 class="h2">Cennik</h2>
 
-        <div class="pricing">
-          <!-- Mistrzowski -->
-          <div class="price-item">
-            <div class="flip">
-              <div class="front">
-                <div class="pill">Najczęściej wybierany</div>
-                <h3>🏆 Plan mistrzowski</h3>
-                <p class="muted">4 tygodnie</p>
-              </div>
-              <div class="back">
-                <div class="big-price">29 zł</div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Startowy -->
-          <div class="price-item">
-            <div class="flip">
-              <div class="front">
-                <h3>🚀 Plan startowy</h3>
-                <p class="muted">2 tygodnie</p>
-              </div>
-              <div class="back">
-                <div class="big-price">19 zł</div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Testowy -->
-          <div class="price-item">
-            <div class="flip">
-              <div class="front">
-                <h3>📅 Plan testowy</h3>
-                <p class="muted">1 tydzień</p>
-              </div>
-              <div class="back">
-                <div class="big-price">0 zł</div>
-              </div>
-            </div>
-          </div>
+  <div class="pricing">
+    <!-- Mistrzowski -->
+    <div class="price-item">
+      <div class="flip">
+        <div class="face front">
+          <div class="pill">Najczęściej wybierany</div>
+          <h3>🏆 Plan mistrzowski</h3>
+          <p class="muted">4 tygodnie</p>
         </div>
-
-        <p class="tiny">* Ceny brutto. Dostawa planu e‑mail w 48 h od potwierdzenia BLIK.</p>
+        <div class="face back">
+          <div class="big-price">29 zł</div>
+        </div>
       </div>
-    </section>
+    </div>
 
+    <!-- Startowy -->
+    <div class="price-item">
+      <div class="flip">
+        <div class="face front">
+          <h3>🚀 Plan startowy</h3>
+          <p class="muted">2 tygodnie</p>
+        </div>
+        <div class="face back">
+          <div class="big-price">19 zł</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Testowy -->
+    <div class="price-item">
+      <div class="flip">
+        <div class="face front">
+          <h3>📅 Plan testowy</h3>
+          <p class="muted">1 tydzień</p>
+        </div>
+        <div class="face back">
+          <div class="big-price">0 zł</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <p class="tiny">* Ceny brutto. Dostawa planu e‑mail w 48 h od potwierdzenia BLIK.</p>
+</div>
+
+<!-- Flip na telefonie (tap) – zostaw na końcu body -->
+<script>
+  document.querySelectorAll('.price-item .flip').forEach(f=>{
+    f.parentElement.addEventListener('click', ()=> f.classList.toggle('is-flipped'));
+  });
+</script>
     <!-- Co zawiera plan (ciemny panel, ludzik po lewej) -->
     <section class="panel dark" id="co-zawiera-plan">
       <h2 class="h2">Co zawiera plan?</h2>
