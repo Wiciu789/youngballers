@@ -33,34 +33,51 @@
         <p class="note">Po formularzu wykonaj BLIK — dopiero wtedy zaczynamy układać plan.</p>
       </div>
 
-      <!-- Cennik (układ jak Trainer) -->
+      <!-- Cennik (flip: przód nazwa, tył cena) -->
       <div class="panel">
         <h2 class="h2">Cennik</h2>
 
-        <article class="price-card">
-          <div class="pill">Najczęściej wybierany</div>
-          <h3>Bogacz — 3 tyg</h3>
-          <p class="muted">Kompletny cykl progresu</p>
-          <div class="price">29 zł</div>
-          <a class="btn btn-ghost" target="_blank" rel="noopener"
-             href="https://forms.gle/ZKgq3z4qoiUp2pwX9">Zamów</a>
-        </article>
+        <div class="pricing">
+          <!-- Mistrzowski -->
+          <div class="price-item">
+            <div class="flip">
+              <div class="front">
+                <div class="pill">Najczęściej wybierany</div>
+                <h3>🏆 Plan mistrzowski</h3>
+                <p class="muted">4 tygodnie</p>
+              </div>
+              <div class="back">
+                <div class="big-price">29 zł</div>
+              </div>
+            </div>
+          </div>
 
-        <article class="price-card">
-          <h3>Plan — 2 tyg</h3>
-          <p class="muted">Szybki progres i test</p>
-          <div class="price">19 zł</div>
-          <a class="btn btn-ghost" target="_blank" rel="noopener"
-             href="https://forms.gle/ZKgq3z4qoiUp2pwX9">Zamów</a>
-        </article>
+          <!-- Startowy -->
+          <div class="price-item">
+            <div class="flip">
+              <div class="front">
+                <h3>🚀 Plan startowy</h3>
+                <p class="muted">2 tygodnie</p>
+              </div>
+              <div class="back">
+                <div class="big-price">19 zł</div>
+              </div>
+            </div>
+          </div>
 
-        <article class="price-card">
-          <h3>Plan — 1 tydz</h3>
-          <p class="muted">Start i rozgrzewka projektu</p>
-          <div class="price">0 zł</div>
-          <a class="btn btn-ghost" target="_blank" rel="noopener"
-             href="https://forms.gle/ZKgq3z4qoiUp2pwX9">Zamów</a>
-        </article>
+          <!-- Testowy -->
+          <div class="price-item">
+            <div class="flip">
+              <div class="front">
+                <h3>📅 Plan testowy</h3>
+                <p class="muted">1 tydzień</p>
+              </div>
+              <div class="back">
+                <div class="big-price">0 zł</div>
+              </div>
+            </div>
+          </div>
+        </div>
 
         <p class="tiny">* Ceny brutto. Dostawa planu e‑mail w 48 h od potwierdzenia BLIK.</p>
       </div>
@@ -89,5 +106,12 @@
 
     <footer>© 2025 YoungBallers • Grasz mądrzej, trenujesz lepiej.</footer>
   </main>
+
+  <!-- Flip na mobile (tap) -->
+  <script>
+    document.querySelectorAll('.price-item .flip').forEach(f=>{
+      f.parentElement.addEventListener('click', ()=> f.classList.toggle('is-flipped'));
+    });
+  </script>
 </body>
 </html>
