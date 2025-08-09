@@ -2,71 +2,82 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
- <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>YoungBallers – Twój plan treningowy</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YoungBallers - Twój plan treningowy</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="content">
     <div class="container">
-      <h1>🔥 YoungBallers – Personalizowany Plan Treningowy</h1>
-      <p>Plan stworzony dla młodych piłkarzy (od 10 lat) przez młodego doświadczonego piłkarza , dopasowany do Twojego wzrostu, wagi, celu i czasu.</p>
+        <!-- Sekcja ludzika + opis -->
+        <div class="intro">
+            <img src="trainer-no-bg.png" alt="Trener" class="trainer-img">
+            <div class="intro-text">
+                <h1>YoungBallers – Personalizowany Plan Treningowy</h1>
+                <p>Plan tworzony dla młodych piłkarzy, dopasowany do Twojego wieku, wagi, celu i czasu.</p>
 
- <div class="trainer-wrapper">
-<img src="trainer-no-bg.png" alt="Trener AI" class="trainer-img">
-  
-    
- 
-</div>
-
-
-      <h2>Jak to działa?</h2>
-    <ul class="steps">
-  <li><span class="number">1</span> Wypełnij formularz zamówienia</li>
-  <li><span class="number">2</span> Wyślij <strong>39 zł BLIK</strong> na <strong>514 609 210</strong></li>
-  <li><span class="number">3</span> Otrzymasz swój plan treningowy w ciągu 24h na e-mail</li>
+                <h2>Co zawiera plan:</h2>
+               <ul class="plan-list">
+  <li class="plan-item"><span class="icon">🏃‍♂️</span><span><strong>Poprawa kondycji</strong></span></li>
+  <li class="plan-item"><span class="icon">💪</span><span><strong>Zwiększenie siły</strong></span></li>
+  <li class="plan-item"><span class="icon">⚽</span><span><strong>Technika piłkarska</strong></span></li>
+  <li class="plan-item"><span class="icon">📈</span><span><strong>Ogólnorozwojowy</strong></span></li>
+  <li class="plan-item"><span class="icon">🩹</span><span><strong>Powrót po kontuzji</strong></span></li>
+  <li class="plan-item"><span class="icon">⚡</span><span><strong>Szybkość i zwinność</strong></span></li>
+  <li class="plan-item"><span class="icon">⏱️</span><span><strong>Wytrzymałość meczowa</strong></span></li>
 </ul>
-      <div class="center">
-        <a href="https://forms.gle/c6sAZQ5Ka9ED9gnd6" class="zamow-btn" target="_blank">🚀 Zamów Plan</a>
-      </div>
+            </div>
+        </div>
 
-      <p class="guarantee">🔒 Jeśli nie otrzymasz planu w ciągu 24h – gwarantujemy pełen zwrot pieniędzy.</p>
+        <!-- Cennik -->
+        <h2 class="center">💰 Cennik – Wybierz swój plan</h2>
+        <div class="pricing">
+            <div class="price-item">
+                <div class="flip">
+                    <div class="front">
+                        <h4>📅 Plan testowy <span>1 tydzień</span></h4>
+                    </div>
+                    <div class="back">
+                        <p><strong>0 zł</strong> – przetestuj za darmo</p>
+                    </div>
+                </div>
+            </div>
 
-<h2>💸 Cennik – Wybierz swój plan</h2>
-<div class="price-box">
+            <div class="price-item">
+                <div class="flip">
+                    <div class="front">
+                        <h4>🚀 Plan startowy <span>2 tygodnie</span></h4>
+                    </div>
+                    <div class="back">
+                        <p><strong>19 zł</strong> – dla tych, co chcą spróbować poważniej</p>
+                    </div>
+                </div>
+            </div>
 
-  <div class="price-item" onclick="this.classList.toggle('flipped')">
-    <div class="front">
-      <h4>🥒 Plan testowy <span>1 tydzień</span></h4>
-    </div>
-    <div class="back">
-      <p><strong>0 zł</strong> – przetestuj za darmo</p>
-    </div>
-  </div>
+            <div class="price-item">
+                <div class="flip">
+                    <div class="front">
+                        <h4>🏆 Plan mistrzowski <span>4 tygodnie</span></h4>
+                    </div>
+                    <div class="back">
+                        <p><strong>29 zł</strong> – pełny dostęp + gwarancja efektów</p>
+                    </div>
+                </div>
+            </div>
+        </div>
 
- <div class="price-item" onclick="this.classList.toggle('flipped')">
-    <div class="front">
-      <h4>⚽ Plan startowy <span>2 tygodnie</span></h4>
+        <div class="center">
+            <a href="https://forms.gle/c6sAzQ5k9E0E9gmd6" target="_blank" class="zamow-btn">📩 Zamów Plan</a>
+        </div>
     </div>
-    <div class="back">
-      <p><strong>19 zł</strong> – dla tych, co chcą spróbować poważniej</p>
-    </div>
-  </div>
 
-  <div class="price-item" onclick="this.classList.toggle('flipped')">
-    <div class="front">
-      <h4>🏆 Plan mistrzowski <span>4 tygodnie</span></h4>
-    </div>
-    <div class="back">
-      <p><strong>39 zł</strong> – pełny dostęp z gwarancją efektów</p>
-    </div>
-  </div>
-
-</div>
-<p class="no-sub">🧾 Jednorazowy zakup – 0 subskrypcji, 100% satysfakcji</p>
-    </div>
-  </div>
+    <!-- Skrypt flip na telefonach -->
+    <script>
+        document.querySelectorAll('.price-item .flip').forEach(el=>{
+            el.parentElement.addEventListener('click', ()=> {
+                el.classList.toggle('is-flipped');
+            });
+        });
+    </script>
 </body>
 </html>
