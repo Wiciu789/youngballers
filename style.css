@@ -102,3 +102,59 @@ footer{ opacity:.9; font-size:13px; text-align:center; margin-top:22px; color:va
   .features{ grid-template-columns:1fr }
   .coach{ justify-content:flex-start }
 }
+/* Czcionki z Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Poppins:wght@400;600&display=swap');
+
+/* Ramka "Jak to działa?" */
+.panel {
+    padding: 2rem;
+    border: 2px solid #ff0; /* neonowa ramka */
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.panel h2 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2.4rem; /* większy tytuł */
+    text-align: center;
+    color: #ff0;
+    text-shadow: 0 0 8px #ff0, 0 0 15px #ff0;
+    margin-bottom: 1.5rem;
+}
+
+.panel ol li {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.3rem; /* większy tekst listy */
+    line-height: 2;
+    color: #fff;
+}
+
+.panel p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1rem;
+    margin-top: 1rem;
+    color: #ccc;
+}
+
+/* Przycisk "Wypełnij formularz" */
+.panel .btn {
+    display: block;
+    margin: 2rem auto 0 auto; /* wyśrodkowanie */
+    padding: 1rem 2rem; /* większy przycisk */
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-family: 'Orbitron', sans-serif;
+    color: #000;
+    background-color: #ff0;
+    border: none;
+    border-radius: 8px;
+    text-align: center;
+    text-decoration: none;
+    box-shadow: 0 0 10px #ff0, 0 0 20px #ff0, 0 0 40px #ff0;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.panel .btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px #fff200, 0 0 30px #fff200, 0 0 60px #fff200;
+}
