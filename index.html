@@ -19,7 +19,9 @@
 
     <!-- GRID 2 kolumny: Jak to działa + Cennik -->
     <section class="grid-2">
-
+<div id="playfield">
+  <div id="ball-emoji">⚽</div>
+</div>
     <div class="panel panel-how">
   <h2 class="h2">Jak to działa?</h2>
   <ol class="steps">
@@ -119,6 +121,30 @@
     document.querySelectorAll('.price-item .flip').forEach(f=>{
       f.parentElement.addEventListener('click', ()=> f.classList.toggle('is-flipped'));
     });
-  </script>
+</script>
+<script>
+const ball = document.getElementById('ball-emoji');
+let x = 20, y = 20;
+let dx = 3, dy = 3;
+
+function animate() {
+  const playfield = document.getElementById('playfield');
+  const maxX = playfield.clientWidth - ball.offsetWidth;
+  const maxY = playfield.clientHeight - ball.offsetHeight;
+
+  x += dx;
+  y += dy;
+
+  if (x <= 0 || x >= maxX) dx = -dx;
+  if (y <= 0 || y >= maxY) dy = -dy;
+
+  ball.style.left = x + 'px';
+  ball.style.top = y + 'px';
+
+  requestAnimationFrame(animate);
+}
+
+animate();
+</script>
 </body>
 </html>
