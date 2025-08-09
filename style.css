@@ -158,3 +158,54 @@ footer{ opacity:.9; font-size:13px; text-align:center; margin-top:22px; color:va
     transform: scale(1.05);
     box-shadow: 0 0 15px #fff200, 0 0 30px #fff200, 0 0 60px #fff200;
 }
+/* ładniejsza, czytelna czcionka do listy */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap');
+
+/* Szeroki, poziomy układ jak na screenie */
+.panel.dark{ padding: 28px 28px 32px; }
+.features{
+  display: grid;
+  grid-template-columns: 220px 1fr;   /* ludzik węższy, lista szeroka */
+  align-items: center;
+  gap: 28px;
+}
+
+/* ludzik – trochę mniejszy, żeby zyskać miejsce na listę */
+.coach img{ width: 100%; max-width: 180px; height: auto; }
+
+/* cała lista = jeden pion z szerokimi „paskami” */
+.feature-list{
+  list-style: none;
+  padding: 0; margin: 0;
+  display: flex; flex-direction: column;
+  gap: 12px;
+}
+
+/* pojedynczy element: ikona + tekst w 1 linii, większa czcionka */
+.feature-list li{
+  font-family: 'Poppins', system-ui, Arial, sans-serif;
+  display: flex; align-items: center; gap: 14px;
+  background: rgba(255,255,255,0.08);       /* zostaje Twoje niebieskie tło, tylko lekko rozjaśnione */
+  border: 2px solid var(--neon-dim);        /* żółta ramka jak u Ciebie */
+  border-radius: 14px;
+  padding: 14px 18px;
+  min-height: 56px;
+  font-size: 1.08rem;                       /* większy tekst */
+}
+.feature-list li strong{ font-weight: 700; margin-right: 4px; }
+
+/* ikona po lewej – większa kostka */
+.ico{
+  width: 36px; height: 36px;
+  display: grid; place-items: center;
+  border-radius: 10px;
+  background: #ffffff18;
+  font-size: 18px;
+}
+
+/* mobile – lista nad ludzikiem, pełna szerokość */
+@media (max-width: 900px){
+  .features{ grid-template-columns: 1fr; }
+  .feature-list{ order: 1; }
+  .coach{ order: 2; }
+}
