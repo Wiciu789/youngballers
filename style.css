@@ -2,9 +2,10 @@
   --bg1:#0b2b6b; --bg2:#1780ff; --stroke:#ffffff28; --txt:#eaf2ff;
   --panel:linear-gradient(180deg,#ffffff12,#ffffff06);
   --radius:18px; --shadow:0 20px 50px rgba(0,0,0,.25);
-  --cta:#00e3a1;
+  --neon:#efff2a; --neon-dim:#c9e400;
 }
 
+/* tło */
 *{box-sizing:border-box}
 body{
   margin:0; color:var(--txt); font-family:Inter,system-ui,Arial,sans-serif;
@@ -12,10 +13,10 @@ body{
 }
 .shell{ max-width:1100px; margin:auto; padding:28px 18px 60px }
 
-/* Panele */
+/* panele */
 .panel{
   background: var(--panel);
-  border:1px solid var(--stroke);
+  border:2px solid var(--neon-dim);         /* RAMKA neonowa */
   border-radius: var(--radius);
   box-shadow: var(--shadow);
   backdrop-filter: blur(8px);
@@ -23,71 +24,81 @@ body{
 }
 
 /* HERO */
-.hero{ margin-bottom: 22px }
+.hero{ margin-bottom:22px }
 .badge{
-  display:inline-block; padding:6px 10px; border:1px solid var(--stroke);
-  border-radius:999px; font-size:13px; opacity:.9; background:#ffffff12
+  display:inline-block; padding:6px 10px; border:2px solid var(--neon-dim);
+  border-radius:999px; font-size:13px; background:#0c2148; color:var(--neon);
+  text-shadow:0 0 6px var(--neon),0 0 14px rgba(239,255,42,.7);
 }
-h1{ margin:.4rem 0 0; font-size: clamp(28px, 4vw, 44px); letter-spacing:.3px }
-.sub{ margin:10px 0 0; opacity:.9 }
+h1,h2,h3,.h2{
+  color:var(--neon);
+  text-shadow:0 0 6px var(--neon),0 0 14px rgba(239,255,42,.7),0 0 28px rgba(239,255,42,.45);
+}
+h1{ margin:.4rem 0 0; font-size: clamp(28px, 4vw, 44px) }
+.sub,.muted,.note,.faq,.tiny, li, a, p, span, strong{ color:var(--neon) }
 
-/* GRID 2 kolumny */
-.grid-2{ display:grid; grid-template-columns: 1fr 1fr; gap:22px; margin-top: 12px }
+.grid-2{ display:grid; grid-template-columns:1fr 1fr; gap:22px; margin-top:12px }
 .h2{ font-size: clamp(20px, 2.6vw, 28px); margin:0 0 12px }
-.steps{ margin:0 0 14px; padding-left: 18px }
+.steps{ margin:0 0 14px; padding-left:18px }
 .steps li{ margin-bottom:10px }
 
+/* przyciski (jeśli gdzieś zostaną) */
 .btn{
-  border:none; padding:12px 18px; border-radius:12px; cursor:pointer;
-  font-weight:700; box-shadow:0 8px 20px rgba(0,0,0,.25);
+  background: transparent; border:2px solid var(--neon-dim); color:var(--neon);
+  padding:12px 18px; border-radius:12px; font-weight:700; cursor:pointer;
+  box-shadow:0 0 12px rgba(239,255,42,.35) inset, 0 0 18px rgba(239,255,42,.25);
 }
-.btn-primary{ background:linear-gradient(135deg,var(--cta),#13c2ff); color:#002b2b }
-.btn-ghost{ background:#ffffff12; color:var(--txt); border:1px solid var(--stroke) }
-.note{ margin:10px 0 0; opacity:.85 }
+.btn:hover{ transform:translateY(-2px) }
 
-/* Cennik – „Trainer style” */
-.price-card{
-  position:relative; background:#0f2c5a80; border:1px solid var(--stroke);
-  border-radius:14px; padding:16px; margin-bottom:16px;
-  transition: transform .2s ease, box-shadow .2s ease;
-}
-.price-card:hover{ transform:translateY(-4px); box-shadow:0 16px 36px rgba(0,0,0,.35) }
-.price-card .pill{
-  position:absolute; top:10px; right:10px; font-size:12px; padding:6px 8px; border-radius:10px;
-  background:#7bff9222; border:1px solid #7bff94aa; color:#b5ffd0;
-}
-.price-card h3{ margin:0 0 6px }
-.muted{ opacity:.85; margin:0 }
-.price{ margin:10px 0 12px; font-weight:800; font-size:20px }
-.tiny{ font-size:13px; opacity:.8; margin-top:8px }
+/* CENNIK – flip: przód nazwa, tył cena */
+.pricing{ display:grid; gap:16px }
+.price-item{ perspective:1000px; height:140px; position:relative }
+.flip{ position:relative; width:100%; height:100%; transition:transform .6s; transform-style:preserve-3d }
+.price-item:hover .flip{ transform:rotateY(180deg) }    /* hover na PC */
+.price-item .flip.is-flipped{ transform:rotateY(180deg) }/* tap na mobile przez JS */
 
-/* Sekcja „Co zawiera plan” – ciemna */
-.panel.dark{
-  background: radial-gradient(120% 140% at 0% 0%, #1e3a8a, #0f172a);
+.face{
+  position:absolute; inset:0; backface-visibility:hidden;
+  background:#0f2c5a80; border:2px solid var(--neon-dim); border-radius:14px;
+  padding:16px; display:flex; flex-direction:column; justify-content:center; align-items:flex-start;
+  box-shadow:0 12px 28px rgba(0,0,0,.28);
 }
-.features{
-  display:grid; grid-template-columns: 260px 1fr; gap:28px; align-items:center; margin-top:8px;
+.front h3{ margin:0 0 4px }
+.back{ transform:rotateY(180deg); align-items:center; text-align:center }
+
+.big-price{
+  font-size:32px; font-weight:900; color:var(--neon);
+  text-shadow:0 0 8px var(--neon),0 0 18px rgba(239,255,42,.7),0 0 36px rgba(239,255,42,.5);
 }
+
+/* pigułka */
+.pill{
+  align-self:flex-end; margin-bottom:6px; padding:6px 8px; border-radius:10px;
+  background:#1c2b00; border:1px solid var(--neon-dim); color:var(--neon);
+  font-size:12px; text-shadow:0 0 6px var(--neon);
+}
+
+/* „Co zawiera plan” */
+.panel.dark{ background: radial-gradient(120% 140% at 0% 0%, #1e3a8a, #0f172a) }
+.features{ display:grid; grid-template-columns:260px 1fr; gap:28px; align-items:center; margin-top:8px }
 .coach{ margin:0; display:flex; justify-content:center }
 .coach img{ width:100%; max-width:220px; height:auto; animation:float 3s ease-in-out infinite }
 @keyframes float{ 0%,100%{transform:translateY(0)} 50%{transform:translateY(-6px)} }
 
-.feature-list{
-  list-style:none; padding:0; margin:0; display:grid; gap:12px;
-}
+.feature-list{ list-style:none; padding:0; margin:0; display:grid; gap:12px }
 .feature-list li{
   display:flex; align-items:center; gap:12px;
-  background:#ffffff10; border:1px solid var(--stroke);
+  background:#0c2148; border:2px solid var(--neon-dim);       /* RAMKI w listach */
   border-radius:12px; padding:12px 14px;
 }
-.ico{ width:28px; height:28px; display:grid; place-items:center; border-radius:8px; background:#ffffff18 }
+.ico{ width:28px; height:28px; display:grid; place-items:center; border-radius:8px; background:#122b5d; color:var(--neon) }
 
-/* Footer */
-footer{ opacity:.7; font-size:13px; text-align:center; margin-top:22px }
+/* stopka */
+footer{ opacity:.9; font-size:13px; text-align:center; margin-top:22px; color:var(--neon) }
 
-/* Mobile */
-@media (max-width: 900px){
-  .grid-2{ grid-template-columns: 1fr }
-  .features{ grid-template-columns: 1fr }
+/* mobile */
+@media (max-width:900px){
+  .grid-2{ grid-template-columns:1fr }
+  .features{ grid-template-columns:1fr }
   .coach{ justify-content:flex-start }
 }
